@@ -31,6 +31,7 @@ int coutRed(string s){
 // Pobierz nową wersję z serwera
 bool checkAndUpdateVersion() {
         system("sudo rm /bin/studentmachine*");
+        system("sudo rm -rf /cpp_studentmachine-nix");
 	//system("sudo wget https://github.com/marcin-filipiak/cpp_studentmachine/raw/main/client/build/studentmachine -P /bin");
   system("sudo git clone --depth 1 https://github.com/theKapcioszek/cpp_studentmachine-nix/ /cpp_studentmachine-nix");
   system("sudo mkdir /cpp_studentmachine-nix/client/build");
