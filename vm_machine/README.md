@@ -1,1 +1,3 @@
-Virtual Machine for VirtualBox 7.0, Ubuntu with integrated StudentMachine https://drive.google.com/file/d/1skiiDTzoESxlegl_sN3R9fHocykbgLUZ/view?usp=sharing
+Virtual Box 7.0 machine, NixOS with integrated studentmachine
+
+[https://drive.google.com/file/d/1MBZKLquyEwGBDc3X8rH0Rz7RXSJf2DuV/view?usp=sharing](https://drive.google.com/file/d/1MBZKLquyEwGBDc3X8rH0Rz7RXSJf2DuV/view?usp=sharing)
