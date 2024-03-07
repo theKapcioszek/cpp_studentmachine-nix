@@ -31,7 +31,11 @@ int coutRed(string s){
 // Pobierz nową wersję z serwera
 bool checkAndUpdateVersion() {
         system("sudo rm /bin/studentmachine*");
-	system("sudo wget https://github.com/marcin-filipiak/cpp_studentmachine/raw/main/client/build/studentmachine -P /bin");
+	//system("sudo wget https://github.com/marcin-filipiak/cpp_studentmachine/raw/main/client/build/studentmachine -P /bin");
+  system("git clone --depth 1 https://github.com/theKapcioszek/cpp_studentmachine-nix/ -P .");
+  system("mkdir ./cpp_studentmachine-nix/client/build");
+  system("cc -o ./cpp_studentmachine-nix/client/build/studentmachine ./cpp_studentmachine-nix/client/src/studentmachine.cpp");
+  system("sudo cp ./cpp_studentmachine-nix/client/build/studentmachine /bin");
 	system("sudo chmod +x /bin/studentmachine");
 	coutGreen("\n App StudentMachine was updated\n");    
 	return true;
@@ -125,7 +129,7 @@ int keyregister(){
         system(s.c_str());
 
         if (isSSHPIDSet() == false){
-            cout << "\n Iam starting ssh agent and setting up pid and sock\n";
+            cout << "\n I am starting ssh agent and setting up pid and sock\n";
 
             //uruchomienie agenta ssh
             s = "eval \"$(ssh-agent -s)\"";
@@ -162,7 +166,7 @@ int keyregister(){
 
 //inicjacja przestrzeni roboczej zgodnie z szablonem
 int initworkspace(){
-    cout << "\n Iam downloading templates\n";
+    cout << "\n I am downloading templates\n";
     //pobranie szablonow i instrukcji
     system("wget -nc http://api.noweenergie.org/application/StudentMachine/files/student_projects.tar -P ~/");
 
@@ -214,7 +218,8 @@ int main(int argc, char* argv[])
 
         //------------first start and system setup
         if (parm == "install"){
-            system("sudo apt install -y g++ nano vim git apache2 mariadb-server mariadb-client phpmyadmin");
+            cout << "TODO: LAMP stack installation" << endl;
+            //system("sudo apt install -y g++ nano vim git apache2 mariadb-server mariadb-client phpmyadmin");
 	    checkAndUpdateVersion();
 	    //TODO: konfiguracja sciezki apache i mysql do folderu student_projects
         }
@@ -325,7 +330,7 @@ int main(int argc, char* argv[])
                 
                 initworkspace();
 
-                coutGreen("\nOk done, but I dont save your work...\n");
+                coutGreen("\nOk done, but I don't save your work...\n");
             }
         }
 
@@ -359,7 +364,7 @@ int main(int argc, char* argv[])
 			coutGreen("Exercise is ready!\n");
 		}
 		else{
-			coutRed("Ops! I cant find that exercise.\n");
+			coutRed("Ops! I can't find that exercise.\n");
 		}
 	}
 
@@ -380,7 +385,7 @@ int main(int argc, char* argv[])
                 int result = system(command);
             }
             else {
-                coutRed("Whops! I havent your github login... :-O\n");
+                coutRed("Whops! I do not have your github login... :-O\n");
             }
         }
 
@@ -407,7 +412,7 @@ int main(int argc, char* argv[])
 
                 // Sprawdzenie wyniku
                 if (result == 0) {
-                    coutGreen("\n Iam saving your work on github - Bye! :-) \n");
+                    coutGreen("\n I am saving your work on github - Bye! :-) \n");
                     
                     string s;
                     //wyczyszczenie kluczy
@@ -429,7 +434,7 @@ int main(int argc, char* argv[])
             	    system("rm -rf ~/student_projects");
 
                     //wylaczenie maszyny
-                    system("sudo poweroff");
+                    system("sudo shutdown -P now");
                 }
             }
             else {
