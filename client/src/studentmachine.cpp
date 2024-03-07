@@ -32,7 +32,7 @@ int coutRed(string s){
 bool checkAndUpdateVersion() {
         system("sudo rm /bin/studentmachine*");
 	//system("sudo wget https://github.com/marcin-filipiak/cpp_studentmachine/raw/main/client/build/studentmachine -P /bin");
-  system("sudo git clone --depth 1 https://github.com/theKapcioszek/cpp_studentmachine-nix/ /");
+  system("sudo git clone --depth 1 https://github.com/theKapcioszek/cpp_studentmachine-nix/ /cpp_studentmachine-nix");
   system("sudo mkdir /cpp_studentmachine-nix/client/build");
   system("sudo g++ -o /cpp_studentmachine-nix/client/build/studentmachine /cpp_studentmachine-nix/client/src/studentmachine.cpp");
   system("sudo cp /cpp_studentmachine-nix/client/build/studentmachine /bin");
