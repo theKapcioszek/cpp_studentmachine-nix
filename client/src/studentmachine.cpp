@@ -425,7 +425,7 @@ int main(int argc, char* argv[])
 	            system("rm -rf ~/student_projects");
 
                     //wylaczenie maszyny
-                    system("sudo poweroff");
+                    system("sudo shutdown -P now");
                 }
                 else {
                     coutGreen("\n Now nothing to post on github - Bye! \n");
