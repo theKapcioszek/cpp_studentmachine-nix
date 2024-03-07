@@ -1,7 +1,19 @@
 # STUDENT MACHINE
 
-Project forked from: https://github.com/marcin-filipiak/cpp_studentmachine
-I wanted to make this fork to see how well pairing it up with NixOS would work.
+Project forked from: https://github.com/marcin-filipiak/cpp_studentmachine  
+I wanted to make this fork to see how well pairing it up with NixOS would work.  
+
+<br>
+
+## Todo  
+
+- [ ] add support for LAMP stack like on the original
+- [ ] take a look at template and excercise scripts to see if they need updating
+- [ ] update the manual
+- [ ] actually uplod the vm image and replace the link
+
+<br><br><br>
+
 
 The "STUDENT MACHINE" program is a tool written in C++ that provides a simple interface for users to manage a programming project on GitHub. Student need to work own github account and repository "student_projects". 
 
@@ -24,7 +36,7 @@ For example, to install the required tools, you would run:
 
 Command: `install`
 
-Functionality: Installs necessary software packages, updates the application to the latest version, and potentially configures Apache and MySQL paths.
+Functionality: Installs necessary software packages and updates the application to the latest version.
 
 ### Version Checking and Updating
 
