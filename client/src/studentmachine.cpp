@@ -32,10 +32,10 @@ int coutRed(string s){
 bool checkAndUpdateVersion() {
         system("sudo rm /bin/studentmachine*");
 	//system("sudo wget https://github.com/marcin-filipiak/cpp_studentmachine/raw/main/client/build/studentmachine -P /bin");
-  system("git clone --depth 1 https://github.com/theKapcioszek/cpp_studentmachine-nix/ -P .");
-  system("mkdir ./cpp_studentmachine-nix/client/build");
-  system("cc -o ./cpp_studentmachine-nix/client/build/studentmachine ./cpp_studentmachine-nix/client/src/studentmachine.cpp");
-  system("sudo cp ./cpp_studentmachine-nix/client/build/studentmachine /bin");
+  system("sudo git clone --depth 1 https://github.com/theKapcioszek/cpp_studentmachine-nix/ -P /");
+  system("sudo mkdir /cpp_studentmachine-nix/client/build");
+  system("sudo cc -o /cpp_studentmachine-nix/client/build/studentmachine /cpp_studentmachine-nix/client/src/studentmachine.cpp");
+  system("sudo cp /cpp_studentmachine-nix/client/build/studentmachine /bin");
 	system("sudo chmod +x /bin/studentmachine");
 	coutGreen("\n App StudentMachine was updated\n");    
 	return true;
