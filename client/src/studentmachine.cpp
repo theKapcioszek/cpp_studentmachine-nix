@@ -224,7 +224,7 @@ int main(int argc, char* argv[])
             //system("sudo apt install -y g++ nano vim git apache2 mariadb-server mariadb-client phpmyadmin");
 	    checkAndUpdateVersion();
       system("sudo cp /cpp_studentmachine-nix/configuration.nix /etc/nixos/");
-      system("sudo nixos-rebuild");
+      system("sudo nixos-rebuild boot");
       system("sudo reboot");
 	    //TODO: konfiguracja sciezki apache i mysql do folderu student_projects
         }
