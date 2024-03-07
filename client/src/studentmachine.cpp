@@ -219,9 +219,13 @@ int main(int argc, char* argv[])
 
         //------------first start and system setup
         if (parm == "install"){
+            
             cout << "TODO: LAMP stack installation" << endl;
             //system("sudo apt install -y g++ nano vim git apache2 mariadb-server mariadb-client phpmyadmin");
 	    checkAndUpdateVersion();
+      system("sudo cp /cpp_studentmachine-nix/configuration.nix /etc/nixos/");
+      system("sudo nixos-rebuild");
+      system("sudo reboot");
 	    //TODO: konfiguracja sciezki apache i mysql do folderu student_projects
         }
 
