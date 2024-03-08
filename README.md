@@ -5,6 +5,15 @@ I wanted to make this fork to see how well pairing it up with NixOS would work.
 
 <br>
 
+## This fork's NixOS VM Features
+- graphical environment
+- C and C++ compiler
+- Python interpreter
+- Vscodium (Open Soucrce binaries for vs code) 
+- build tools (make, cmake, ninja, meson) 
+
+<br>
+
 ## Todo  
 
 - [ ] add support for LAMP stack like on the original
@@ -24,13 +33,13 @@ To run the program, follow these steps:
 * Navigate to the directory where the studentmachine executable is located.
 * Run the program by typing the following command and providing a parameter:
 
-`./studentmachine [command]`
+`studentmachine [command]`
 
 Replace [command] with one of the command.
 
 For example, to install the required tools, you would run:
 
-`./studentmachine install`
+`studentmachine install`
 
 ### Installation and System Setup
 
