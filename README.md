@@ -9,7 +9,7 @@ I wanted to make this fork to see how well pairing it up with NixOS would work.
 
 - [ ] add support for LAMP stack like on the original
 - [ ] take a look at template and excercise scripts to see if they need updating
-- [ ] update the manual
+- [X] update the manual
 - [X] actually upload the vm image and replace the link
 
 <br><br><br>
