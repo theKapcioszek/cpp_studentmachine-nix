@@ -9,8 +9,9 @@ I wanted to make this fork to see how well pairing it up with NixOS would work.
 - graphical environment
 - C and C++ compiler
 - Python interpreter
-- Vscodium (Open Soucrce binaries for vs code) 
-- build tools (make, cmake, ninja, meson) 
+- Vscodium (Open Source binaries for vs code) 
+- build tools (make, cmake, ninja, meson)
+- firefox
 
 <br>
 
@@ -100,7 +101,9 @@ Functionality:
 
 # LINKS
 
+Vitrual Machines:  
 [Virtual Machine for VirtualBox 7.0, NixOS with integrated StudentMachine](https://drive.google.com/file/d/1MBZKLquyEwGBDc3X8rH0Rz7RXSJf2DuV/view?usp=sharing)
+[Same machine but with everything already installed](https://drive.google.com/file/d/1C6xTgLLwlpovgp8L-5Gu9N1_UdRu3I16/view?usp=sharing)
 
 Official keyring server for StudentMachine where you can find your public key (need to import in Github)
 http://api.noweenergie.org/application/StudentMachine/keyring/
