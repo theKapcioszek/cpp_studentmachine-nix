@@ -10,6 +10,11 @@
       ./hardware-configuration.nix
     ];
 
+  environment.variables = {
+ CPLUS_INCLUDE_PATH = "${pkgs.gtest.dev}/include";
+ LIBRARY_PATH = "${pkgs.gtest}/lib";
+  };
+
   # Bootloader.
   boot.loader.grub.enable = true;
   boot.loader.grub.device = "/dev/sda";
@@ -66,10 +71,12 @@
   # Configure shell
   programs.bash.shellAliases = {
 
-	cls = "clear";
-	studentmachine = "/cpp_studentmachine-nix/client/build/studentmachine";
+ cls = "clear";
+ studentmachine = "/cpp_studentmachine-nix/client/build/studentmachine";
 
   };
+
+  # programs.bash.interactiveShellInit = "nix-shell /cpp_studentmachine-nix/shell.nix";
 
   # Configure console keymap
   console.keyMap = "pl2";
@@ -114,20 +121,21 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-	vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-	wget
-	git
-	gcc
-	gnumake
-	perl
-	vscodium
-	neofetch
-	htop
-	clang
-	ninja
-	meson
-	python3
-	cmake
+ vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+ wget
+ git
+ gcc
+ gnumake
+ perl
+ vscodium
+ neofetch
+ htop
+ clang
+ ninja
+ meson
+ python3
+ cmake
+ gtest
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
