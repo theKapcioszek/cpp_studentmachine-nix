@@ -18,7 +18,7 @@ I wanted to make this fork to see how well pairing it up with NixOS would work.
 ## Todo  
 
 - [ ] add support for LAMP stack like on the original
-- [ ] take a look at template and excercise scripts to see if they need updating
+- [X] take a look at template and excercise scripts to see if they need updating
 - [X] update the manual
 - [X] actually upload the vm image and replace the link
 
@@ -101,9 +101,8 @@ Functionality:
 
 # LINKS
 
-Vitrual Machines:  
-[Virtual Machine for VirtualBox 7.0, NixOS with integrated StudentMachine](https://drive.google.com/file/d/1MBZKLquyEwGBDc3X8rH0Rz7RXSJf2DuV/view?usp=sharing)  
-[Same machine but with everything already installed](https://drive.google.com/file/d/1C6xTgLLwlpovgp8L-5Gu9N1_UdRu3I16/view?usp=sharing)
+Vitrual Machine:  
+[Virtual Machine for VirtualBox 7.0, NixOS with integrated StudentMachine and lxqt installed](https://drive.google.com/file/d/1C6xTgLLwlpovgp8L-5Gu9N1_UdRu3I16/view?usp=sharing)
 
 Official keyring server for StudentMachine where you can find your public key (need to import in Github)
 http://api.noweenergie.org/application/StudentMachine/keyring/
